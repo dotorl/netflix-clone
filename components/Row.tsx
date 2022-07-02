@@ -15,6 +15,7 @@ function Row({ title, movies }: Props) {
   const [isMoved, setIsMoved] = useState(false);
 
   const handleClick = (direction: string) => {
+    // TODO:  length로  index 관리 해서 우측, 좌측에 대한 show/hide도 더 추가해야 할 것 같음 ( or  Scroll 위치 값등.)
     setIsMoved(true);
     if (rowRef.current) {
       const { scrollLeft, clientWidth } = rowRef.current;
